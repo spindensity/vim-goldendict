@@ -18,7 +18,7 @@ Table of Contents
 GoldenDict is a cross-platform dictionary program. This plugin is a vim/neovim
 interface of goldendict.
 
-You can find more infomation on the official website and the Github of
+You can find more information on the official website and the Github of
 GoldenDict:
 * Official website: http://goldendict.org/
 * Github: https://github.com/goldendict/goldendict/
