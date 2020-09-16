@@ -1,0 +1,103 @@
+*goldendict.txt*  A vim/neovim interface of GoldenDict
+
+                ____       _     _            ____  _      _    ~
+               / ___| ___ | | __| | ___ _ __ |  _ \(_) ___| |_  ~
+              | |  _ / _ \| |/ _` |/ _ \ '_ \| | | | |/ __| __| ~
+              | |_| | (_) | | (_| |  __/ | | | |_| | | (__| |_  ~
+               \____|\___/|_|\__,_|\___|_| |_|____/|_|\___|\__| ~
+
+==============================================================================
+CONTENTS
+
+    1. Introduction ................ |goldendict-intro|
+    2. Configuration ............... |goldendict-conf|
+    3. Mappings .................... |goldendict-mappings|
+    4. Usage ....................... |goldendict-usage|
+    5. License ..................... |goldendict-license|
+    6. Bugs ........................ |goldendict-bugs|
+    7. Contributing ................ |goldendict-contrib|
+    8. Changelog ................... |goldendict-changelog|
+
+==============================================================================
+1. Introduction                                             *goldendict-intro*
+
+GoldenDict is a cross-platform dictionary program. This plugin is a vim/neovim
+interface of goldendict.
+
+You can find more infomation on the official website and the Github of
+GoldenDict:
+    * Official website: http://goldendict.org/
+    * Github: https://github.com/goldendict/goldendict/
+
+==============================================================================
+2. Configuration                                             *goldendict-conf*
+
+You can configure the following settings to change how vim-goldendict works.
+
+------------------------------------------------------------------------------
+2.1 g:goldendict_path                                      *g:goldendict_path*
+
+The path of the goldendict.
+
+Default: goldendict
+
+Example: >
+    if has('win32')
+        let g:goldendict_path = 'C:\Program Files\GoldenDict\GoldenDict.exe'
+    else
+        let g:goldendict_path = 'goldendict'
+    endif
+<
+==============================================================================
+3. Mappings                                              *goldendict-mappings*
+
+------------------------------------------------------------------------------
+3.1 <Plug>(goldendict-lookup-cursor)        *<Plug>(goldendict-lookup-cursor)*
+
+Lookup the word under the cursor when not in visual or select mode.
+
+------------------------------------------------------------------------------
+3.2 <Plug>(goldendict-lookup-visual)        *<Plug>(goldendict-lookup-visual)*
+
+Lookup the content of the selected text when in visual mode.
+
+==============================================================================
+4. Usage                                                    *goldendict-usage*
+
+Add the following settings to your $HOME/.vimrc:
+>
+    imap <F1> <C-\><C-O><Plug>(goldendict-lookup-cursor)
+    nmap <F1> <Plug>(goldendict-lookup-cursor)
+    vmap <F1> <C-G><Plug>(goldendict-lookup-visual)<C-G>
+<
+Then you can press <F1> key to lookup word. When in visual or select mode, the
+word would be the content of the selected text, otherwise would be the word
+under the cursor.
+
+You can change <F1> to any key(s) you like.
+
+==============================================================================
+5. License                                                *goldendict-license*
+
+vim-goldendict is MIT licensed.
+
+==============================================================================
+6. Bugs                                                      *goldendict-bugs*
+
+If you find a bug please post it on the issue tracker:
+http://github.com/spindensity/vim-goldendict/issues/
+
+==============================================================================
+7. Contributing                                           *goldendict-contrib*
+
+Think you can make this plugin better?  Awesome!
+
+Email a patch to spindensity@gmail.com or send a pull request.
+
+GitHub:    https://github.com/spindensity/vim-goldendict/
+
+==============================================================================
+8. Changelog                                            *goldendict-changelog*
+
+v0.1
+    * Initial release.
