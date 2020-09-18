@@ -68,7 +68,9 @@ function! goldendict#lookup(phrase, vs_mode_p) abort
     if phrase != ''
         call s:uni_job_start(shellescape(g:goldendict_path) . ' ' . shellescape(phrase))
     else
+        echohl WarningMsg
         echo "Empty phrase!"
+        echohl None
     endif
 endfunction
 
